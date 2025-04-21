@@ -63,6 +63,12 @@ export default {
       }
     },
 
+    //GET查
+    //POST新增
+    //PUT修改
+    //DELETE删除
+
+
     // 获取成员数据，在网页加载时立刻执行（被mounted执行）
     async fetchData(){
       try {
