@@ -16,13 +16,13 @@
 
           <el-table-column type="selection" v-if="isEditing" width="100" align="center"></el-table-column>
 
-          <el-table-column prop="name" label="姓名" width="300" align="center"></el-table-column>
+          <el-table-column prop="name" label="姓名" width="100" align="center"></el-table-column>
 
           <el-table-column prop="office" label="职位" width="200" align="center"></el-table-column>
 
           <el-table-column prop="category" label="部门" width="300" align="center"></el-table-column>
 
-          <el-table-column prop="hobby" label="爱好" align="center" width="400"></el-table-column>
+          <el-table-column prop="hobby" label="爱好" align="center" width="300"></el-table-column>
 
           <el-table-column label="状态" align="center" width="300">
             <template #default = "scope">
