@@ -48,12 +48,16 @@
         <el-dialog title="人员信息" :visible.sync="dialogVisible" width="30%">
           <span>
             <el-form>
-              <el-form-item label="ID" style="display: flex">
-                <el-input v-model="currentMember.id" disabled></el-input>
+              <el-form-item style="display: flex">
+                <el-input v-model="currentMember.id" disabled>
+                  <template v-slot:prepend>ID</template>
+                </el-input>
               </el-form-item>
 
-              <el-form-item label="姓名" style="display: flex">
-                <el-input v-model="currentMember.name"></el-input>
+              <el-form-item style="display: flex">
+                <el-input v-model="currentMember.name">
+                  <template v-slot:prepend>姓名</template>
+                </el-input>
               </el-form-item>
 
               <el-form-item label="性别">
@@ -71,8 +75,10 @@
                 <el-input v-model="currentMember.dept"></el-input>
               </el-form-item>
 
-              <el-form-item label="电话号码" style="display: flex">
-                <el-input v-model="currentMember.phone"></el-input>
+              <el-form-item label="电话" style="display: flex">
+                <el-input v-model="currentMember.phone">
+                  <template v-slot:prepend>+86</template>
+                </el-input>
               </el-form-item>
 
               <el-form-item label="邮箱" style="display: flex">
@@ -83,7 +89,7 @@
                 <el-input v-model="currentMember.hobby"></el-input>
               </el-form-item>
 
-              <el-form-item label="状态">
+<!--              <el-form-item label="状态">
                 <div style="display: flex; align-items: center;">
                   <el-switch v-model="currentMember.status" active-color="#13ce66" inactive-color="#ff4949" :active-value="true" :inactive-value="false">
                   </el-switch>
@@ -91,6 +97,10 @@
                     {{ currentMember.status ? '空闲' : '忙碌' }}
                   </span>
                 </div>
+              </el-form-item>-->
+              <el-form-item>
+                <el-switch style="display: block" v-model="currentMember.ststus" active-color="#ff4949" inactive-color="#13ce66" active-text="忙碌" inactive-text="空闲">
+                </el-switch>
               </el-form-item>
 
             </el-form>
