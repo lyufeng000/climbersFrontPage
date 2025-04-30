@@ -4,11 +4,21 @@
   <el-container>
     <el-header><el-page-header @back = "goback" content="联系我们"></el-page-header></el-header>
     <el-main>
-      <el-descriptions :column=3 :data="memberTable">
-        <el-descriptions-item>
-          <template slot="label">姓名</template>
-            <div>{{ memberTable[0].name }}</div>
-        </el-descriptions-item>
+      <el-descriptions :column=4 :data="memberTable">
+        <template v-for="(member, index) in memberTable">
+          <el-descriptions-item label="姓名" :key="index">
+            {{member.name}}
+          </el-descriptions-item>
+          <el-descriptions-item :key="index" label="职务">
+            {{member.office}}
+          </el-descriptions-item>
+          <el-descriptions-item :key="index" label="邮箱">
+            {{member.email}}
+          </el-descriptions-item>
+          <el-descriptions-item :key="index" label="电话">
+            {{member.phone}}
+          </el-descriptions-item>
+        </template>
       </el-descriptions>
     </el-main>
   </el-container>
